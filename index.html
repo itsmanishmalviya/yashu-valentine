@@ -1,66 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>For Yashu 💛</title>
-  <style>
-    body {
-      background: #fff0f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    .card {
-      background: white;
-      padding: 30px 35px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      text-align: center;
-      max-width: 360px;
-    }
-    h2 {
-      color: #e11d48;
-      margin-bottom: 12px;
-    }
-    p {
-      margin-bottom: 18px;
-      font-size: 15px;
-    }
-    button {
-      padding: 12px 35px;
-      border: none;
-      border-radius: 30px;
-      font-size: 16px;
-      cursor: pointer;
-      background: #ec4899;
-      color: #fff;
-      display: inline-block;
-    }
-  </style>
-</head>
-<body>
+<form
+  name="valentine"
+  method="POST"
+  data-netlify="true"
+  action="/thanks.html"
+>
+  <input type="hidden" name="form-name" value="valentine">
 
-  <div class="card">
-    <h2>Hey Yashu 💛</h2>
+  <button type="submit" name="answer" value="Yes ❤️">
+    Yes 💖
+  </button>
 
-    <p>
-      Is Valentine’s Day,<br>
-      kya tum mere saath time spend karogi?
-    </p>
+  <br><br>
 
-    <form
-      name="valentine"
-      method="POST"
-      data-netlify="true"
-      action="/thanks.html"
-    >
-      <input type="hidden" name="form-name" value="valentine">
-      <input type="hidden" name="answer" value="YES ❤️">
+  <button type="submit" name="answer" value="Tum plan karo 😊">
+    Tum plan karo 😊
+  </button>
 
-      <button type="submit">Yes 💖</button>
-    </form>
+  <br><br>
 
-    <
+  <button type="submit" name="answer" value="Surprise me 🙈">
+    Surprise me 🙈
+  </button>
+</form>
