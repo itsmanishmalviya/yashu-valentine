@@ -35,11 +35,10 @@
       margin-bottom: 22px;
     }
 
-    /* OPTIONS STYLE */
     .option {
       display: block;
-      padding: 12px;
-      margin: 10px 0;
+      padding: 14px;
+      margin: 12px 0;
       border-radius: 30px;
       cursor: pointer;
       color: white;
@@ -50,29 +49,9 @@
       display: none;
     }
 
-    .yes {
-      background: #ec4899;
-    }
-
-    .no {
-      background: #9ca3af;
-    }
-
-    .surprise {
-      background: #f59e0b;
-    }
-
-    .submit-btn {
-      margin-top: 15px;
-      padding: 12px;
-      width: 100%;
-      border: none;
-      border-radius: 30px;
-      background: #22c55e;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-    }
+    .yes { background: #ec4899; }
+    .no { background: #9ca3af; }
+    .surprise { background: #f59e0b; }
   </style>
 </head>
 
@@ -87,6 +66,7 @@
     </p>
 
     <form
+      id="valentineForm"
       name="valentine"
       method="POST"
       data-netlify="true"
@@ -95,29 +75,31 @@
       <input type="hidden" name="form-name" value="valentine">
 
       <label class="option yes">
-        <input type="radio" name="answer" value="Yes ❤️" required>
+        <input type="radio" name="answer" value="Yes ❤️" onclick="submitForm()">
         Yes 💖
       </label>
 
       <label class="option no">
-        <input type="radio" name="answer" value="No 🙈">
+        <input type="radio" name="answer" value="No 🙈" onclick="submitForm()">
         No 🙈
       </label>
 
       <label class="option surprise">
-        <input type="radio" name="answer" value="Surprise me 😍">
+        <input type="radio" name="answer" value="Surprise me 😍" onclick="submitForm()">
         Surprise me 😍
       </label>
-
-      <button type="submit" class="submit-btn">
-        Submit 💌
-      </button>
     </form>
 
     <p style="margin-top:18px;">
       Tumhare jawab ka intezaar rahega 😊
     </p>
   </div>
+
+  <script>
+    function submitForm() {
+      document.getElementById("valentineForm").submit();
+    }
+  </script>
 
 </body>
 </html>
