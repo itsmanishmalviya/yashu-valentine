@@ -1,24 +1,91 @@
-<form
-  name="valentine"
-  method="POST"
-  data-netlify="true"
-  action="/thanks.html"
->
-  <input type="hidden" name="form-name" value="valentine">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Yashu 💛</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff0f5;
+      font-family: Arial, sans-serif;
+    }
 
-  <button type="submit" name="answer" value="Yes ❤️">
-    Yes 💖
-  </button>
+    .card {
+      background: white;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      text-align: center;
+      max-width: 360px;
+      width: 90%;
+    }
 
-  <br><br>
+    h2 {
+      color: #e11d48;
+      margin-bottom: 10px;
+    }
 
-  <button type="submit" name="answer" value="Tum plan karo 😊">
-    Tum plan karo 😊
-  </button>
+    p {
+      font-size: 15px;
+      margin-bottom: 22px;
+    }
 
-  <br><br>
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      color: white;
+    }
 
-  <button type="submit" name="answer" value="Surprise me 🙈">
-    Surprise me 🙈
-  </button>
-</form>
+    .yes { background: #ec4899; }
+    .no { background: #9ca3af; }
+    .surprise { background: #f59e0b; }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Hey Yashu 💛</h2>
+
+    <p>
+      Is Valentine’s Day,<br>
+      kya tum mere saath time spend karogi?
+    </p>
+
+    <form
+      name="valentine"
+      method="POST"
+      data-netlify="true"
+      action="/thanks.html"
+    >
+      <input type="hidden" name="form-name" value="valentine">
+
+      <button class="btn yes" type="submit" name="answer" value="Yes ❤️">
+        Yes 💖
+      </button>
+
+      <button class="btn no" type="submit" name="answer" value="No 😅">
+        No 🙈
+      </button>
+
+      <button class="btn surprise" type="submit" name="answer" value="Surprise me 😍">
+        Surprise me 😍
+      </button>
+    </form>
+
+    <p style="margin-top:18px;">
+      Tumhare jawab ka intezaar rahega 😊
+    </p>
+  </div>
+
+</body>
+</html>
