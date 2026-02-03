@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>For Yashu 💛</title>
+
   <style>
     body {
       margin: 0;
@@ -34,23 +35,47 @@
       margin-bottom: 22px;
     }
 
-    .btn {
+    /* OPTIONS STYLE */
+    .option {
       display: block;
-      width: 100%;
       padding: 12px;
       margin: 10px 0;
-      border: none;
       border-radius: 30px;
-      font-size: 16px;
       cursor: pointer;
       color: white;
+      font-size: 16px;
     }
 
-    .yes { background: #ec4899; }
-    .no { background: #9ca3af; }
-    .surprise { background: #f59e0b; }
+    .option input {
+      display: none;
+    }
+
+    .yes {
+      background: #ec4899;
+    }
+
+    .no {
+      background: #9ca3af;
+    }
+
+    .surprise {
+      background: #f59e0b;
+    }
+
+    .submit-btn {
+      margin-top: 15px;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 30px;
+      background: #22c55e;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
   </style>
 </head>
+
 <body>
 
   <div class="card">
@@ -69,16 +94,23 @@
     >
       <input type="hidden" name="form-name" value="valentine">
 
-      <button class="btn yes" type="submit" name="answer" value="Yes ❤️">
+      <label class="option yes">
+        <input type="radio" name="answer" value="Yes ❤️" required>
         Yes 💖
-      </button>
+      </label>
 
-      <button class="btn no" type="submit" name="answer" value="No 😅">
+      <label class="option no">
+        <input type="radio" name="answer" value="No 🙈">
         No 🙈
-      </button>
+      </label>
 
-      <button class="btn surprise" type="submit" name="answer" value="Surprise me 😍">
+      <label class="option surprise">
+        <input type="radio" name="answer" value="Surprise me 😍">
         Surprise me 😍
+      </label>
+
+      <button type="submit" class="submit-btn">
+        Submit 💌
       </button>
     </form>
 
